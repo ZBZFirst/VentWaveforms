@@ -763,17 +763,17 @@
         <label>Y axis
           <select id="y-axis-control">
             <option value="flow">Flow</option>
-            <option value="time">Time</option>
-            <option value="volume" selected>Volume</option>
+            <option value="time" selected>Time</option>
+            <option value="volume">Volume</option>
             <option value="pressure">Pressure</option>
           </select>
         </label>
         <label>Z axis
           <select id="z-axis-control">
             <option value="flow">Flow</option>
-            <option value="time" selected>Time</option>
+            <option value="time">Time</option>
             <option value="volume">Volume</option>
-            <option value="pressure">Pressure</option>
+            <option value="pressure" selected>Pressure</option>
           </select>
         </label>
         <label>Thickness
@@ -785,10 +785,10 @@
           </select>
         </label>
         <label>Min thickness
-          <input id="thickness-min-control" type="number" min="0.5" max="120" step="0.25" value="5">
+          <input id="thickness-min-control" type="number" min="0.5" max="120" step="0.25" value="1">
         </label>
         <label>Max thickness
-          <input id="thickness-max-control" type="number" min="0.5" max="120" step="0.25" value="80">
+          <input id="thickness-max-control" type="number" min="0.5" max="120" step="0.25" value="10">
         </label>
         <label>Rotation mode
           <button id="camera-mode-toggle" type="button" aria-pressed="true">Quaternion</button>
@@ -1392,8 +1392,8 @@
       };
       const interpolatePoint = (startPoint, endPoint, blend) => startPoint.map((value, index) => value + (endPoint[index] - value) * blend);
       const thicknessRange = () => {
-        const a = Math.max(0.5, Math.min(120, Number.isFinite(thicknessMin) ? thicknessMin : 5));
-        const b = Math.max(0.5, Math.min(120, Number.isFinite(thicknessMax) ? thicknessMax : 80));
+        const a = Math.max(0.5, Math.min(120, Number.isFinite(thicknessMin) ? thicknessMin : 1));
+        const b = Math.max(0.5, Math.min(120, Number.isFinite(thicknessMax) ? thicknessMax : 10));
         return [Math.min(a, b), Math.max(a, b)];
       };
       const thicknessForPoint = (point, variable) => {
