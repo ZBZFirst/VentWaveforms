@@ -1,0 +1,18 @@
+# Python runtime cache
+__pycache__/
+*.py[cod]
+
+# Local editor and OS noise
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+
+# Local runtime logs and scratch output
+*.log
+tmp/
+scratch/
+
+# This project is currently private/local. If a private git repo is created later,
+# review generated artifacts and source datasets before changing these rules.
