@@ -1,9 +1,5 @@
 # VentWaveforms
 
-Local-only ventilator waveform exploration project.
-
-This project is intentionally private and local. It is not currently a git repository and should not be pushed to GitHub without an explicit review of the source dataset and generated waveform output.
-
 ## What is here
 
 - `data.xlsx`: source ventilator waveform dataset used by the parser.
@@ -32,22 +28,8 @@ Known work still needed:
 
 Render the waveform HTML:
 
-```bash
-python3 plot_waveforms.py
-```
+https://zbzfirst.github.io/VentWaveforms/waveforms.html
 
-Or render from a different captured dataset/output path:
+Or download waveforms.html
 
-```bash
-python3 plot_waveforms.py path/to/input.xlsx -o path/to/waveforms.html
-```
-
-## Local-only guardrail
-
-Before ever initializing git or publishing this project, review:
-
-- `data.xlsx`
-- `waveforms.html`
-- `artifacts/html_versions/`
-
-Those files may contain private local work product or source data.
+and open locally
